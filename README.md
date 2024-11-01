@@ -38,6 +38,12 @@ A privacy-preserving application that allows users to submit their ages and comp
 
 ## Running the Application
 
+### Generate keys
+
+```bash
+cargo run --bin client -- -c generate-keys
+```
+
 ### Server
 
 1. Start the server:
