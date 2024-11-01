@@ -1,0 +1,28 @@
+[package]
+name = "private-age-stats"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "server"
+path = "src/main.rs"
+
+[[bin]]
+name = "client"
+path = "src/bin/client.rs"
+
+[dependencies]
+actix-web = "4.4"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.0", features = ["full"] }
+tfhe = { version = "0.5.2", features = ["integer", "aarch64-unix"] }
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "postgres"] }
+dotenv = "0.15"
+thiserror = "1.0"
+base64 = "0.21"
+futures = "0.3"
+reqwest = { version = "0.11", features = ["json"] }
+uuid = { version = "1.4", features = ["v4"] }
+clap = { version = "4.4", features = ["derive"] }
+bincode = "1.3"
